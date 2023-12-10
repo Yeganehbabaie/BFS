@@ -1,13 +1,13 @@
 from collections import defaultdict 
 class UnDirectedGraph: 
-     # Constructor 
+      
     def __init__(self): 
    
-        # default dictionary to store graph 
+        
         self.graph = defaultdict(list)
         self.E = 0
    
-    # function to add an edge to graph 
+    
     def addEdge(self,u,v): 
         if v in self.graph[u]:
             return
@@ -31,4 +31,35 @@ class UnDirectedGraph:
             print()
 
 
+ #for example:
+# if __name__ == '__main__':
     
+    #g = UnDirectedGraph()
+    #g.addEdge(0, 1) 
+    #g.addEdge(0, 4) 
+    #g.addEdge(1, 4) 
+    #g.addEdge(1, 3) 
+    #g.addEdge(1, 2) 
+    #g.addEdge(2, 3) 
+    #g.addEdge(3, 4) 
+    #print('print Graph:')
+    #g.printGraph()
+    
+    #print('BFS:',end=' ')
+    #g.BFS(0)
+    
+#Use the example above to test bfs.
+The output is as follows:
+print Graph:
+
+0 : 1 4
+
+1 : 0 4 3 2
+
+4 : 0 1 3
+
+3: 1 2 4
+
+2:1 3
+
+BFS: 0 1 4 3 2
